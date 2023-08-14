@@ -30,5 +30,4 @@
 │       └── readme.pdf
 ├── requirements.txt
 └── scripts-python
-    └── conexao-postgress.py
-`
+    └── conexao-postgress.py`
