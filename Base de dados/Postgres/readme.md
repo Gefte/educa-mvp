@@ -5,7 +5,8 @@
 * navegar até o repositório do postgress Base de dados/Postgres/dockerfile
 
 * Digitar os comando na ordem abaixo, 1 por vez no terminal:
-    1 - `docker-compose ps`
+    1 - `docker-compose up -d`
+    2 - `docker-compose ps`
 
 * Crie um ambiente virtual e o ative:
     1 - Primeiro precisamos de um ambiente virtual para instalar as dependencias do projeto.
@@ -20,7 +21,6 @@
 
 * rode o script conexao-postgress.py
     - `python3 scripts-python/conexao-postgress.py`
-
 
 .
 ├── Base de dados
