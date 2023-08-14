@@ -22,7 +22,7 @@
 * rode o script conexao-postgress.py
     - `python3 scripts-python/conexao-postgress.py`
 
-.
+`.
 ├── Base de dados
 │   └── Postgres
 │       ├── docker-compose.yml
@@ -31,3 +31,4 @@
 ├── requirements.txt
 └── scripts-python
     └── conexao-postgress.py
+`
