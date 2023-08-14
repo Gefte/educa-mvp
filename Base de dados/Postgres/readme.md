@@ -1,33 +1,36 @@
-#### Como executar.
+## Instruções de Execução
 
-* Clonar o repositório
+Siga estas etapas para executar o projeto:
 
-* navegar até o repositório do postgress Base de dados/Postgres/dockerfile
+1. **Clonar o Repositório**
 
-* Digitar os comando na ordem abaixo, 1 por vez no terminal:
-    1 - `docker-compose ps`
+   Clone o repositório e navegue até a pasta do projeto:
+   ```shell
+    git clone https://github.com/Gefte/educa-mvp.git
+    
+    cd nome_do_repositório
 
-* Crie um ambiente virtual e o ative:
-    1 - Primeiro precisamos de um ambiente virtual para instalar as dependencias do projeto.
-       * `python -m venv .venv`
-    2 - E ative a virtualenv
-        # Linux
-        * `source .venv/bin/activate`
-        # Windows Power Shell
-        * `.\venv\Scripts\activate.ps1`
+2. **Configurar o Banco de Dados PostgreSQL com Docker**
+    
+    ```shell
+    cd Base de dados/Postgres
+    
+    docker-compose up -d
+    
+    docker-compose ps
 
-* Execute o comando: `pip install -r requirements.txt`
+3. **Configurar o Ambiente Virtual**
+    
+    ```shell
+    python -m venv .venv
+    
+    source .venv/bin/activate
 
-* rode o script conexao-postgress.py
-    - `python3 scripts-python/conexao-postgress.py`
+    pip install -r requirements.txt
+
+4. **Executar o Script de Conexão ao PostgreSQL**
+
+    ```shell
+    python scripts-python/conexao-postgress.py
 
 
-.
-├── Base de dados
-│   └── Postgres
-│       ├── docker-compose.yml
-│       ├── readme.md
-│       └── readme.pdf
-├── requirements.txt
-└── scripts-python
-    └── conexao-postgress.py
