@@ -55,23 +55,47 @@ table {
 }
 
 .banner {
-    width: auto;
     position: relative;
+    width: 100%;
     margin-bottom: 1.5rem;
+    overflow: hidden; /* Para conter o conteúdo dentro do banner */
 }
 
 .banner__imagem {
     width: 100%;
+    display: block;
+}
+
+.banner__conteudo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: #FFFFFF;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .banner__titulo {
+    font-size: 10px; /* Tamanho da fonte do título */
+    line-height: 36px; /* Espaçamento entre as linhas do título */
+    margin-bottom: 12px; /* Espaçamento inferior do título */
+    width: 100%; /* Ocupa toda a largura do banner */
+    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+.banner__legenda {
+    font-size: 14px; /* Tamanho da fonte da legenda */
+    line-height: 18px; /* Espaçamento entre as linhas da legenda */
     color: #FFFFFF;
-    font-size: 40px;
-    width: 350px;
-    line-height: 50px;
-    position: absolute;
-    top: 80px;
-    left: 80px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .cabecalho {
@@ -349,7 +373,7 @@ table {
 }
 
 .rodape__texto {
-    font-size: 1.1rem;
+    font-size: 2.5rem;
 }
 
 .tags {
