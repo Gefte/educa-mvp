@@ -1,9 +1,10 @@
 import os
 import psycopg2
 from dotenv import load_dotenv
-
+import pandas as pd
 
 load_dotenv('scripts-python/.env')
+
 
 
 db_params = {
