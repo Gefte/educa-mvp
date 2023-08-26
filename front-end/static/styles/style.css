@@ -33,7 +33,7 @@ body {
     line-height: 1;
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    background: linear-gradient(#041833,#04244F,#154580);
+    background: linear-gradient(#C4E0E5, #E6F1F5, #F8FBFC);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -55,54 +55,30 @@ table {
 }
 
 .banner {
+    width: auto;
     position: relative;
-    width: 100%;
     margin-bottom: 1.5rem;
-    overflow: hidden; /* Para conter o conteúdo dentro do banner */
 }
 
 .banner__imagem {
     width: 100%;
-    display: block;
-}
-
-.banner__conteudo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    color: #FFFFFF;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
 .banner__titulo {
-    font-size: 10px; /* Tamanho da fonte do título */
-    line-height: 36px; /* Espaçamento entre as linhas do título */
-    margin-bottom: 12px; /* Espaçamento inferior do título */
-    width: 100%; /* Ocupa toda a largura do banner */
-    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
-    text-align: center; /* Centraliza o texto horizontalmente */
-}
-
-.banner__legenda {
-    font-size: 14px; /* Tamanho da fonte da legenda */
-    line-height: 18px; /* Espaçamento entre as linhas da legenda */
     color: #FFFFFF;
-    padding: 20px;
-    box-sizing: border-box;
+    font-size: 40px;
+    width: 350px;
+    line-height: 50px;
+    position: absolute;
+    top: 80px;
+    left: 80px;
 }
 
 .cabecalho {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin: 1 rem 0 4rem 0;
+    margin: 1.5rem 0 4rem 0;
 }
 
 .cabecalho__busca {
@@ -115,6 +91,30 @@ table {
     padding: 2px;
     width: auto; 
 }
+.caixa_resposta {
+    margin-top: 2cm;
+}
+
+.visualizar_resposta {
+    margin-left: 2cm;
+}
+
+.resposta textarea {
+    width: 100%; /* Ocupa toda a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+}
+.cabecalho_resposta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D940;
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
 
 .busca__fundo {
     align-items: center;
@@ -142,7 +142,7 @@ table {
 }
 
 .cards {
-    width: 100%;
+    width: 50%;
 }
 
 .cards__titulo {
@@ -165,11 +165,14 @@ table {
     color: #FFFFFF;
     margin-bottom: 1.5rem;
     position: relative;
-    width: 450px;
+    width: 250px; /* Ajuste a largura conforme necessário */
+    display: inline-block; /* Adicionado para alinhar lado a lado */
+    margin-right: 10px; /* Espaço entre os cards */
 }
 
+
 .card__imagem {
-    width: 450px;
+    width: 250px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -177,24 +180,20 @@ table {
     background-color: #D9D9D940;
     border-radius: 8px;
     border: 2px solid transparent;
+    color: black;
     font-size: 1.2rem;
     left: 310px;
     margin-right: 1.5rem;
     padding: .5rem .5rem;
+    position: absolute;
     text-align: center;
     top: 0px;
-    width: 10px;
+    width: 100px;
 }
 
 .card__info {
-    position: absolute;
-    bottom: 0;
-    right: 310px;
-    width: 100%;
-    background-color: #D9D9D940;
-    padding: 1.5rem 1.5rem 2rem;
-    font-size: 5rem;
-    border-radius: 0 0 8px 8px;
+    font-size: 1.2rem;
+    padding: 0 1.5rem 1rem 1.5rem;
 }
 
 .card__titulo {
@@ -225,31 +224,26 @@ table {
 
 .imagem {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .imagem__conteudo {
-    background-color: transparent;
     display: flex;
-    flex-direction: column;
-    border-radius: 20px 20px 0 0;
-    width: 950px;
+    flex-direction: column; /* Alinhar os elementos em uma linha */
+    align-items: flex-start; /* Alinhar os itens ao topo */
 }
 
 .imagem__imagem {
-    width: 100%;
+    width: 100%; /* Aumentar a largura da imagem */
+    max-width: 1000px; /* Definir um valor máximo para a largura */
     border-radius: 20px;
 }
 
 .imagem__info {
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+    flex: 1; /* A caixa de texto ocupará o espaço restante */
+    padding-left: 20px; /* Adicione um espaçamento à esquerda */
 }
+
 
 .imagem__texto {
     display: flex;
@@ -275,23 +269,33 @@ table {
 
 .menu-lateral {
     padding-right: 1.5rem;
+    margin-left: 0.5cm; /* Adiciona margem à esquerda para posicionar o menu */
     box-sizing: border-box;
     min-width: 270px;
 }
 
+
 .menu-lateral__navegacao {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .menu-lateral__navegacao a {
     font-family: 'Space Grotesk', sans-serif;
-    align-items: center;
-    display: flex;
-    margin-bottom: 1.5rem;
-    text-decoration: none;
-    color: #D9D9D9;
     font-size: 24px;
+    color: #D9D9D9;
+    text-decoration: none;
+    display: flex; /* Adiciona flexbox para alinhar itens verticalmente */
+    align-items: center; /* Alinha ícone e texto verticalmente */
+}
+
+.menu-lateral__navegacao a i {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.menu-text {
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
 .menu-lateral__navegacao a:first-child {
@@ -299,14 +303,20 @@ table {
     color: #7B78E5;
 }
 
+.menu-lateral__navegacao a:hover {
+    color: #FFFFFF; /* Cor do texto ao passar o mouse */
+}
+
+
 .menu-lateral__navegacao img {
     margin-right: 1.5rem;
 }
 
 .pagina-inicial {
     max-width: 1440px;
-    padding: 1.5rem;
+    padding: .5rem;
     margin: 0 auto;
+    margin-left: 5rem;
 }
 
 .populares {
@@ -378,7 +388,7 @@ table {
 }
 
 .rodape__texto {
-    font-size: 2.5rem;
+    font-size: 1.1rem;
 }
 
 .tags {
@@ -398,16 +408,42 @@ table {
 }
 
 .tags__tag {
-    background-color: #D9D9D930;
-    margin-right: 1.5rem;
+    background: linear-gradient(to bottom, #C4E0E5, #E6F1F5);
     border-radius: 8px;
     padding: .8rem .5rem;
-    width: 100px;
     text-align: center;
     border: 2px solid transparent;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    color: #154580; /* Cor do texto */
+    font-family: 'Space Grotesk', sans-serif; /* Aplicando a fonte */
+}
+
+.tags__tag {
+    background:linear-gradient(45deg, #C98CF1,#7B78E5);
+    border-radius: 8px;
+    padding: .8rem .5rem;
+    text-align: center;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    color: #154580; /* Cor do texto */
+    font-family: 'Space Grotesk', sans-serif; /* Aplicando a fonte */
 }
 
 .tags__tag:hover {
     border: 2px solid #7B78E5;
     cursor: pointer;
+}
+
+
+
+.tags__tag:hover {
+    border: 2px solid #7B78E5;
+    cursor: pointer;
+}
+
+#markdown-input {
+    width: 100%; /* Use 100% da largura disponível */
+    box-sizing: border-box; /* Inclua padding e borda na largura total */
 }
