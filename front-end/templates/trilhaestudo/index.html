@@ -2,9 +2,7 @@
 {% load static %}
 {% block content %}
 <main>
-    <section class="conteudo">
-        </section>
-        <section class="galeria">
+        <div class="galeria">
                 <ul class="cards__lista">
                     {% if cards %}
                         {% for materia in cards %}
@@ -22,8 +20,7 @@
                     {% else %}
                     {% endif %}
                 </ul>                
-        </section>
-    </section>
+        </div>
 </main>
 </div>
 {% endblock %}

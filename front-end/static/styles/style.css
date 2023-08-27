@@ -172,7 +172,7 @@ table {
 
 
 .card__imagem {
-    width: 250px;
+    width: 450px;
     border-radius: 10px 10px 0 0;
 }
 
@@ -218,7 +218,7 @@ table {
 }
 
 .galeria {
-    display: flex;
+    display: table-row;
     width: 100%;
 }
 
@@ -229,7 +229,7 @@ table {
 
 .imagem__conteudo {
     display: flex;
-    flex-direction: column; /* Alinhar os elementos em uma linha */
+    flex-direction: row; /* Alinhar os elementos em uma linha */
     align-items: flex-start; /* Alinhar os itens ao topo */
 }
 
@@ -447,3 +447,4 @@ table {
     width: 100%; /* Use 100% da largura disponível */
     box-sizing: border-box; /* Inclua padding e borda na largura total */
 }
+
